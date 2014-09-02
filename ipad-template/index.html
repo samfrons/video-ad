@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Video Advert 2.03</title>
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+        <link rel="apple-touch-icon" href="icon.png">
+        <link href="ipad.css" rel="stylesheet" type="text/css">
+        <link href="animate.css" rel="stylesheet" type="text/css">
+        
+        <style type="text/css" >
+
+            body {
+                padding-top: 2em;
+            }
+
+            #wrap {
+                font-size: 66%;
+            }
+                 
+
+            .bottom {
+                width: 100%;
+                margin: 0 auto;
+                text-align: center;
+                position: relative;
+                margin-top: 30em;
+                
+            }
+
+            .bottom.paper {
+                background-image: url(images/paper-half.png);
+                background-size: cover;
+                position: absolute;
+                top: 180px;
+                height: 500px;
+
+            }
+
+            #logo {
+                margin-top: 5em;
+            }
+            
+            .bottom.paper img {
+                display: block;
+                margin: 0 auto;
+                position: relative;
+                top: 275px;
+            }
+
+            .bottom img {
+                display: block;
+                 margin: 0 auto;
+            }
+
+
+            #video-bk {
+                -webkit-animation: bounceInLeft 3s linear ;
+                -webkit-animation-fill-mode: forwards;
+                -webkit-animation-delay:1s;
+            }
+
+            .bottom.paper {
+                -webkit-animation: displayIn .1s linear ;
+                -webkit-animation-fill-mode: forwards;
+                -webkit-animation-delay:2s;
+                opacity: 0;
+
+
+            }
+            .sprite { background: url(images/sprite.png) no-repeat top left;  } 
+
+            .text {
+                display: block;
+                width: 520px;
+                margin: 0 auto;
+            }
+
+            .text span {
+                display: block;
+            }
+
+            .many {
+                background-position: 0px -506px; width: 518px; height: 89px; 
+                -webkit-animation: bounceInLeft 3s linear ;
+                -webkit-animation-fill-mode: forwards;
+                -webkit-animation-delay:2s;
+                
+
+            }
+
+            .jobs {
+                background-position: 0px -615px; width: 529px; height: 211px;
+                -webkit-animation: bounceInLeft 3s linear ;
+                -webkit-animation-fill-mode: forwards;
+                -webkit-animation-delay:2.5s;
+            }
+
+            .create {
+                background-position: 0px -401px; width: 519px; height: 85px; 
+                -webkit-animation: bounceInLeft 3s linear ;
+                -webkit-animation-fill-mode: forwards;
+                -webkit-animation-delay:3s;
+            }
+
+            .australia {
+                background-position: 0px -112px; width: 542px; height: 97px; 
+                -webkit-animation: bounceInLeft 3.5s linear ;
+                -webkit-animation-fill-mode: forwards;
+                -webkit-animation-delay:3s;
+                opacity: 0;
+            }
+
+                .sprite.play-button {
+                background-position: 0px -112px; width: 542px; height: 97px; 
+                -webkit-animation: bounceInLeft 3.5s linear ;
+                -webkit-animation-fill-mode: forwards;
+                -webkit-animation-delay:3.5s;
+                 background-position: 0px -846px; width: 95px; height: 95px; 
+                position: absolute;
+left: 40%;
+top: 40%; } 
+
+    
+
+        </style>
+    </head>
+    <body style="background:#000;">
+        <!-- Task: Set a body background in case of larger resolution -->
+        
+        <!-- Tracking endpoint ONLY CHANGE THE LOCATION REFERENCE, LEAVE ALL OTHER ATTRIBUTES AS IS -->
+        <!-- <iframe id="ifrA" src="http://example.com/iframe-v1.07.html" height="0" width="0" frameBorder="0" style="width:1px;height:1px;display:block;position:absolute;left:-90000px;"></iframe> -->
+        
+        <div id="wrap">
+            
+            <!-- Standard Fairfax Tablet Close button - DO NOT MODIFY  -->
+            <a id="close" href="button:close"></a>
+            
+            
+            <!-- Landscape Image: Update the reference to your landscape image	--> 
+            <div id="landscape" >
+
+             <div class="screen" id="one">
+                <h2 class="headline" id="think">THINK</h2>
+                <h2 class="headline" id="local">LOCAL</h2>
+                <h2 class="headline" id="first">FIRST</h2>
+
+
+                 <div class="bottom">
+                <img id="explore" src="images/cta-explore.png"/>
+
+                <img id="logo" src="images/chevron-logo.png"/>
+
+                </div>
+            </div>
+
+            <div class="screen" id="two">
+                <div id="video-bk">
+
+                <div class="text">
+                    <span class="sprite many"></span>
+                    <span class="sprite jobs"></span>
+                    <span class="sprite create"></span>
+                    <span class="sprite australia"></span>
+                </div>
+                <div class="sprite play-button"></div>
+                <div id="player"></div>
+<!-- this was just a random iframe i put in
+               <iframe src="http://www.youtube.com/embed/0H0Ab9TID64?rel=0&amp;amp;theme=light&amp;amp;iv_load_policy=3&amp;amp;showinfo=0&amp;amp;hd=1&amp;amp;autohide=1&amp;amp;color=white&amp;amp;autoplay=1" frameborder="0" width="768" height="450" id="video"></iframe>
+ -->
+                </div>
+                 <div class="bottom paper">
+                <img id="explore" src="images/cta-explore.png"/>
+
+                <img id="logo" src="images/chevron-logo.png"/>
+
+                </div>
+
+
+            </div>
+
+
+            </div>
+            
+            <!-- Portrait Image: Update the reference to your portrait image --> 
+            <div id="portrait">
+            
+            <div class="screen" id="one">
+                <h2 class="headline" id="think">THINK</h2>
+                <h2 class="headline" id="local">LOCAL</h2>
+                <h2 class="headline" id="first">FIRST</h2>
+
+
+                 <div class="bottom">
+                <img id="explore" src="images/cta-explore.png"/>
+
+                <img id="logo" src="images/chevron-logo.png"/>
+
+                </div>
+            </div>
+
+            <div class="screen" id="two">
+                <div id="video-bk">
+
+                <div class="text">
+                    <span class="sprite many"></span>
+                    <span class="sprite jobs"></span>
+                    <span class="sprite create"></span>
+                    <span class="sprite australia"></span>
+                </div>
+
+                <a href="#" onclick="play()"><div class="sprite play-button">play</div></a>
+
+                <div id="player"></div>
+<!--this was just a random iframe i put in
+
+               <iframe src="http://www.youtube.com/embed/0H0Ab9TID64?rel=0&amp;amp;theme=light&amp;amp;iv_load_policy=3&amp;amp;showinfo=0&amp;amp;hd=1&amp;amp;autohide=1&amp;amp;color=white&amp;amp;autoplay=1" frameborder="0" width="768" height="450" id="video"></iframe>
+               -->
+ 
+                </div>
+                 <div class="bottom paper">
+                <img id="explore" src="images/cta-explore.png"/>
+
+                <img id="logo" src="images/chevron-logo.png"/>
+
+                </div>
+
+
+            </div>
+
+            <div class="screen" id="three">
+          <h2> have this screen appear after video is done (user can also skip to the end)</h2>
+           </div>
+
+
+
+
+
+
+          
+            
+            
+            <!-- 
+                Reference the video file name as supplied.
+                Note that video will be processed and streamed from the Fairfax VMS
+           
+            <video id="videoPlayer" title="-Your-vide-title-" controls="controls" poster="poster_test1.jpg">
+                <source src="http://mediadownload.f2.com.au/flash/media/2012/06/15/3377577/iPad_vod.m3u8"></video>
+            </video> -->    
+            
+            
+            
+        </div>
+        
+        
+        <!-- DO NOT MODIFY BELOW THIS LINE -->
+        <script type="text/javascript" src="resources/javascript/tracking.js"></script>
+        <script type="text/javascript">
+            //<![CDATA[ 
+            TabletTracking.trackVideoEvents('videoPlayer');
+            //]]> 
+        </script>
+<script>
+      // 2. This code loads the IFrame Player API code asynchronously.
+      var tag = document.createElement('script');
+
+      tag.src = "https://www.youtube.com/iframe_api";
+      var firstScriptTag = document.getElementsByTagName('script')[0];
+      firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+      // 3. This function creates an <iframe> (and YouTube player)
+      //    after the API code downloads.
+      var player;
+      function onYouTubeIframeAPIReady() {
+        player = new YT.Player('player', {
+          height: '390',
+          width: '640',
+          videoId: 'M7lc1UVf-VE',
+          events: {
+            'onReady': onPlayerReady,
+            'onStateChange': onPlayerStateChange
+          }
+        });
+      }
+
+      // 4. The API will call this function when the video player is ready.
+      function onPlayerReady(event) {
+        event.target.playVideo();
+      }
+
+      // 5. The API calls this function when the player's state changes.
+      //    The function indicates that when playing a video (state=1),
+      //    the player should play for six seconds and then stop.
+      var done = false;
+      function onPlayerStateChange(event) {
+        if (event.data == YT.PlayerState.PLAYING && !done) {
+          setTimeout(stopVideo, 6000);
+          done = true;
+        }
+      }
+      function stopVideo() {
+        player.stopVideo();
+      }
+    </script>
+        
+    </body>
+</html>
