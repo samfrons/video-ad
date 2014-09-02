@@ -41,6 +41,11 @@ video{-webkit-transition-property:top,left,width,height;}
 	background-size: cover;
 }
 
+ #landscape {
+ 	background: url(images/paper-l.jpg);
+	background-size: cover;
+ }
+
 .screen.portrait#three {
 	height: 1004px;
 width: 768px;
@@ -156,6 +161,7 @@ visibility: hidden;
 	background: url(images/jobs.jpg);
 	background-size: cover;
 	width: 1024px;
+	height: 690px;
 }
 
 #video-bk {
@@ -189,6 +195,14 @@ visibility: hidden;
                 width: 1024px;
                 position: absolute;
                 top: 0px;
+}
+
+#three .tagline.landscape.left {
+	margin-top: 45px;
+}
+
+#three .tagline.landscape.left .sprite-tag {
+	padding-bottom: 28px;
 }
 
 
@@ -238,8 +252,7 @@ visibility: hidden;
     animation-fill-mode: forwards;
     -webkit-animation-delay:.5s;
   position: relative;
-  top: -460px;
-  left: 10px;
+  
 }
 
 
@@ -370,7 +383,14 @@ visibility: hidden;
 
 
 .sprite { background: url('sprite.png') no-repeat top left;  } 
-.sprite.agree { background-position: 0px 0px; width: 360px; height: 92px;  } 
+.sprite.agree { background-position: 0px 0px; width: 360px; height: 92px;top: -55px;
+left: -25px; position: relative;  } 
+
+.landscape .agree {
+top: -50px;
+left: -5px;
+
+}
 .sprite.australia { background-position: 0px -112px; width: 542px; height: 97px;  } 
 .sprite.chevron-logo { background-position: 0px -229px; width: 106px; height: 99px;  } 
 .sprite.cta-explore { background-position: 0px -348px; width: 240px; height: 33px;  } 
@@ -383,8 +403,11 @@ visibility: hidden;
 
 
 
-.sprite-tag.first { background-position: 0px 0px; width: 439px; height: 148px;  } 
-.sprite-tag.local { background-position: 0px -178px; width: 444px; height: 164px;  } 
+.sprite-tag.first { background-position: 0px 0px; width: 439px; height: 148px; position: relative;
+top: -33px; } 
+.sprite-tag.local { background-position: 0px -178px; width: 444px; height: 164px; position: relative;
+top: -15px;
+ } 
 .sprite-tag.think { background-position: 0px -372px; width: 446px; height: 183px;  } 
 
 
