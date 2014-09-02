@@ -23,18 +23,32 @@
                 width: 100%;
                 margin: 0 auto;
                 text-align: center;
-                position: relative;
-                margin-top: 30em;
+                position: absolute;
+                bottom: 0;
                 
+            }
+
+            .bottom .sprite {
+                display: block;
+                 margin: 0 auto;
+                margin-bottom: 55px;
+            }
+
+            .bottom .sprite.cta-explore {
+                margin-bottom: 65px;
             }
 
             .bottom.paper {
                 background-image: url(images/paper-half.png);
                 background-size: cover;
                 position: absolute;
-                top: 180px;
-                height: 500px;
+                bottom: 0;
+                height: 484px;
 
+            }
+
+            .sprite-tag {
+                display: inline-block;
             }
 
             #logo {
@@ -48,16 +62,69 @@
                 top: 275px;
             }
 
-            .bottom img {
-                display: block;
-                 margin: 0 auto;
+            .bottom.landscape {
+                height: 141px;
+                bottom: 0px;
+                top: initial;
+                margin: 0 auto;
+                position: absolute;
+
             }
 
+            .bottom.landscape .sprite {
+                display: inline-block;
+            }
 
-            #video-bk {
-                -webkit-animation: bounceInLeft 3s linear ;
+            .bottom.paper.landscape {
+                -webkit-animation: bounceInLeft .1s linear ;
                 -webkit-animation-fill-mode: forwards;
-                -webkit-animation-delay:1s;
+                -webkit-animation-delay:2s;
+                background-image: url(images/paper-half-l.png);
+                height: 141px;
+                bottom: 0px;
+                top: initial;
+
+            }
+
+            .bottom.landscape .cta-explore, .bottom.landscape .watch  {
+              margin: 0;
+                float: left;
+                left: 30px;
+                top: 85px;
+                position: relative;
+}
+
+            .bottom.landscape .chevron-logo {
+                margin: 0;
+                float: right;
+                 position: relative;
+                 right: 10px;
+                top: 40px;
+                -webkit-transform: scale(.7,.7);
+            }
+            
+            .portrait#two {
+                height: 1004px;
+                width: 768px;
+                overflow: hidden;
+            }
+
+            #two {
+                visibility: hidden;
+                -webkit-animation: bounceInLeft 3s linear ; 
+                -webkit-animation-fill-mode: forwards;
+                -webkit-animation-delay:2s;
+                display: block;
+                height: 748px;
+                width: 1024px;
+                position: absolute;
+                top: 0px;
+
+            }
+
+            #video-bk.landscape {
+                height: 700px;
+                width: 1024px;
             }
 
             .bottom.paper {
@@ -74,6 +141,7 @@
                 display: block;
                 width: 520px;
                 margin: 0 auto;
+                margin-top: 60px;
             }
 
             .text span {
@@ -111,17 +179,50 @@
                 opacity: 0;
             }
 
-                .sprite.play-button {
+                .play-button {
                 background-position: 0px -112px; width: 542px; height: 97px; 
                 -webkit-animation: bounceInLeft 3.5s linear ;
                 -webkit-animation-fill-mode: forwards;
                 -webkit-animation-delay:3.5s;
                  background-position: 0px -846px; width: 95px; height: 95px; 
                 position: absolute;
-left: 40%;
-top: 40%; } 
+                left: 345px;
+                top: 245px;
+                } 
 
-    
+                .play-button.landscape {
+                    left: 470px;
+                    top: 255px;
+                }
+
+    .sprite.chevron-logo { background-position: 0px -229px; width: 106px; height: 99px;  } 
+.sprite.cta-explore { background-position: 0px -348px; width: 240px; height: 33px;  } 
+
+.tagline {
+    margin-top: 20px;
+}
+
+
+.sprite-tag {
+  
+                margin: 0 auto;
+                display: block;
+                overflow: hidden;
+                padding-bottom: 30px;
+}
+
+.sprite-b { background: url('image/tagline-sprite-b.png') no-repeat top left;  } 
+.sprite.first-b { background-position: 0px 0px; width: 446px; height: 169px;  } 
+.sprite.local-b { background-position: 0px -199px; width: 446px; height: 177px;  } 
+.sprite.think-b { background-position: 0px -406px; width: 446px; height: 185px;  } 
+
+#agree {
+    visibility: hidden;
+    -webkit-animation: zoomOut .3s ease-out ;
+                -webkit-animation-fill-mode: forwards;
+                -webkit-animation-delay:7s;
+                margin: 0 auto;
+}
 
         </style>
     </head>
@@ -141,21 +242,20 @@ top: 40%; }
             <div id="landscape" >
 
              <div class="screen" id="one">
-                <h2 class="headline" id="think">THINK</h2>
-                <h2 class="headline" id="local">LOCAL</h2>
-                <h2 class="headline" id="first">FIRST</h2>
+                <div class="tagline">
+                <div class='sprite-tag think' id="think"></div>
+                <div class='sprite-tag local' id="local"></div>
+                <div class='sprite-tag first' id="first"></div>
+                </div>
 
-
-                 <div class="bottom">
-                <img id="explore" src="images/cta-explore.png"/>
-
-                <img id="logo" src="images/chevron-logo.png"/>
-
+                 <div class="bottom landscape">
+                    <a href="#" onclick="play()"><span class="sprite cta-explore"></span></a>
+                    <span class="sprite chevron-logo"></span>
                 </div>
             </div>
 
-            <div class="screen" id="two">
-                <div id="video-bk">
+              <div class="screen" id="two">
+                <div id="video-bk" class="landscape">
 
                 <div class="text">
                     <span class="sprite many"></span>
@@ -163,22 +263,35 @@ top: 40%; }
                     <span class="sprite create"></span>
                     <span class="sprite australia"></span>
                 </div>
-                <div class="sprite play-button"></div>
-                <div id="player"></div>
-<!-- this was just a random iframe i put in
+                <div class="sprite play-button landscape"></div>
+              <div id="player"></div> 
+ this was just a random iframe i put in
                <iframe src="http://www.youtube.com/embed/0H0Ab9TID64?rel=0&amp;amp;theme=light&amp;amp;iv_load_policy=3&amp;amp;showinfo=0&amp;amp;hd=1&amp;amp;autohide=1&amp;amp;color=white&amp;amp;autoplay=1" frameborder="0" width="768" height="450" id="video"></iframe>
- -->
+ 
                 </div>
-                 <div class="bottom paper">
-                <img id="explore" src="images/cta-explore.png"/>
-
-                <img id="logo" src="images/chevron-logo.png"/>
+                 <div class="bottom paper landscape">
+                 <a href="#" onclick="play()"><span class="sprite cta-explore"></span></a>
+                    <span class="sprite chevron-logo"></span>
 
                 </div>
 
 
             </div>
+             <div class="screen landscape" id="three">
+          <div class="tagline left">
+                <div class='sprite-tag think' id="think1"></div>
+                <div class='sprite-tag local' id="local1"></div>
+                <div class='sprite-tag first' id="first1"></div>
+                 <div class="sprite agree" id="agree"></div>
+                </div>
 
+               
+                 <div class="bottom landscape">
+               <a href="#" onclick="play()"><span class="sprite watch"></span></a>
+                    <span class="sprite chevron-logo"></span>
+                    </div>
+           </div>
+           
 
             </div>
             
@@ -186,20 +299,21 @@ top: 40%; }
             <div id="portrait">
             
             <div class="screen" id="one">
-                <h2 class="headline" id="think">THINK</h2>
-                <h2 class="headline" id="local">LOCAL</h2>
-                <h2 class="headline" id="first">FIRST</h2>
+               <div class="tagline">
+                <div class='sprite-tag think' id="think"></div>
+                <div class='sprite-tag local' id="local"></div>
+                <div class='sprite-tag first' id="first"></div>
+                </div>
 
 
                  <div class="bottom">
-                <img id="explore" src="images/cta-explore.png"/>
-
-                <img id="logo" src="images/chevron-logo.png"/>
+                <a href="#" onclick="play()"><span class="sprite cta-explore"></span></a>
+                    <span class="sprite chevron-logo"></span>
 
                 </div>
             </div>
 
-            <div class="screen" id="two">
+            <div class="screen portrait" id="two">
                 <div id="video-bk">
 
                 <div class="text">
@@ -209,28 +323,41 @@ top: 40%; }
                     <span class="sprite australia"></span>
                 </div>
 
-                <a href="#" onclick="play()"><div class="sprite play-button">play</div></a>
-
+                <a href="#" onclick="play()"><div class="sprite play-button"></div></a>
+<!--
                 <div id="player"></div>
-<!--this was just a random iframe i put in
-
+                this was just a random iframe i put in
                <iframe src="http://www.youtube.com/embed/0H0Ab9TID64?rel=0&amp;amp;theme=light&amp;amp;iv_load_policy=3&amp;amp;showinfo=0&amp;amp;hd=1&amp;amp;autohide=1&amp;amp;color=white&amp;amp;autoplay=1" frameborder="0" width="768" height="450" id="video"></iframe>
-               -->
+              -->
  
                 </div>
                  <div class="bottom paper">
-                <img id="explore" src="images/cta-explore.png"/>
 
-                <img id="logo" src="images/chevron-logo.png"/>
+                 <div class="bottom">
+               <a href="#" onclick="play()"><span class="sprite cta-explore"></span></a>
+                    <span class="sprite chevron-logo"></span>
+                    </div>
 
                 </div>
 
 
             </div>
 
-            <div class="screen" id="three">
-          <h2> have this screen appear after video is done (user can also skip to the end)</h2>
+            <div class="screen portrait" id="three">
+          <div class="tagline left">
+                <div class='sprite-tag think' id="think1"></div>
+                <div class='sprite-tag local' id="local1"></div>
+                <div class='sprite-tag first' id="first1"></div>
+                 <div class="sprite agree" id="agree"></div>
+                </div>
+
+               
+                 <div class="bottom">
+               <a href="#" onclick="play()"><span class="sprite cta-explore"></span></a>
+                    <span class="sprite chevron-logo"></span>
+                    </div>
            </div>
+           
 
 
 
